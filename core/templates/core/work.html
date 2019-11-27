@@ -1,69 +1,72 @@
 {%extends "core/layout.html"%}
 {%load static%}
 {%block content%}
-<body>
-
   <main id="work">
     <h1 class="lg-heading">
       My
-      <span class="text-secondary">Work</span>
+      <span class="text-warning">Work</span>
     </h1>
     <h2 class="sm-heading">
       Check out some of my projects...
     </h2>
     <div class="projects">
       <div class="item">
-        <a href="#!">
+        <h1>Django</h1>
+        <a href="{% url 'core:project' %}">
           <img src="{%static "dist/img/projects/project1.jpg"%}" alt="Project">
         </a>
-        <a href="#" class="btn-light">
+        <a href="{% url 'core:project' %}" class="btn-light">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="#" class="btn-dark">
+        <a href="{% url 'core:project' %}" class="btn-dark">
           <i class="fab fa-github"></i> Github
         </a>
       </div>
       <div class="item">
-        <a href="#!">
+        <h1>React native</h1>
+        <a href="{% url 'core:project' %}">
           <img src="{%static "dist/img/projects/project2.jpg"%}" alt="Project">
         </a>
-        <a href="#" class="btn-light">
+        <a href="{% url 'core:project' %}" class="btn-light">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="#" class="btn-dark">
+        <a href="{% url 'core:project' %}" class="btn-dark">
           <i class="fab fa-github"></i> Github
         </a>
       </div>
       <div class="item">
-        <a href="#!">
+        <h1>Javascript</h1>
+        <a href="{% url 'core:project' %}">
           <img src="{%static "dist/img/projects/project3.jpg"%}" alt="Project">
         </a>
-        <a href="#" class="btn-light">
+        <a href="{% url 'core:project' %}" class="btn-light">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="#" class="btn-dark">
+        <a href="{% url 'core:project' %}" class="btn-dark">
           <i class="fab fa-github"></i> Github
         </a>
       </div>
       <div class="item">
-        <a href="#!">
+        <h1>Flutter</h1>
+        <a href="{% url 'core:project' %}">
           <img src="{%static "dist/img/projects/project4.jpg"%}" alt="Project">
         </a>
-        <a href="#" class="btn-light">
+        <a href="{% url 'core:project' %}" class="btn-light">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="#" class="btn-dark">
+        <a href="{% url 'core:project' %}" class="btn-dark">
           <i class="fab fa-github"></i> Github
         </a>
       </div>
       <div class="item">
-        <a href="#!">
+        <h1>Kivy</h1>
+        <a href="{% url 'core:project' %}">
           <img src="{%static "dist/img/projects/project5.jpg"%}"alt="Project">
         </a>
-        <a href="#" class="btn-light">
+        <a href="{% url 'core:project' %}" class="btn-light">
           <i class="fas fa-eye"></i> Project
         </a>
-        <a href="#" class="btn-dark">
+        <a href="{% url 'core:project' %}" class="btn-dark">
           <i class="fab fa-github"></i> Github
         </a>
       </div>
