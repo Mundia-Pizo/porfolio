@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Projects
+from .models import Project, MyWork
 
-
-admin.site.register(Projects)
+admin.site.register(MyWork)
+admin.site.register(Project)

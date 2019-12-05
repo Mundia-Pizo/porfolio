@@ -10,62 +10,22 @@
       Check out some of my projects...
     </h2>
     <div class="row">
+      {%for object in object_list%}
         <div class="col-md-6">
           <div class="work-style">
             <div class="item">
-              <h1>Django</h1>
-              <a href="{% url 'core:project' %}">
-                <img src="{%static "dist/img/projects/project1.jpg"%}" alt="Project" class="project-images-on">
+              <h1>{{object.title}}</h1>
+              <a href="{{object.get_absolute_url}}">
+                <img src="{{object.image.url}}" alt="Project" class="project-images-on">
               </a>
-              <a href="{% url 'core:project' %}" class="btn-light btn-style1">
+              <a href="" class="btn-light btn-style1">
                 <i class="fas fa-eye"></i> Project
               </a>
-              
+
             </div>
-          </div>
-          
-            <div class="item">
-              <h1>React native</h1>
-              <a href="{% url 'core:project' %}">
-                <img src="{%static "dist/img/projects/project2.jpg"%}" alt="Project"class="project-images-on">
-              </a>
-              <a href="{% url 'core:project' %}" class="btn-light btn-style1">
-                <i class="fas fa-eye"></i> Project
-              </a>
-              
             </div>
-            <div class="item">
-              <h1>Javascript</h1>
-              <a href="{% url 'core:project' %}">
-                <img src="{%static "dist/img/projects/project3.jpg"%}" alt="Project"class="project-images-on">
-              </a>
-              <a href="{% url 'core:project' %}" class="btn-light btn-style1">
-                <i class="fas fa-eye"></i> Project
-              </a>
-              
             </div>
-          </div>
-            <div class="col-md-6">
-            <div class="item">
-              <h1>Flutter</h1>
-              <a href="{% url 'core:project' %}">
-                <img src="{%static "dist/img/projects/project4.jpg"%}" alt="Project"class="project-images-on">
-              </a>
-              <a href="{% url 'core:project' %}" class="btn-light btn-style1">
-                <i class="fas fa-eye"></i> Project
-              </a>
-            </div>
-            <div class="item">
-              <h1>Kivy</h1>
-              <a href="{% url 'core:project' %}">
-                <img src="{%static "dist/img/projects/project5.jpg"%}"alt="Project"class="project-images-on">
-              </a>
-              <a href="{% url 'core:project' %}" class="btn-light btn-style1">
-                <i class="fas fa-eye"></i> Project
-              </a>
-            </div>
-          
-            </div>
+        {%endfor%}
           </div>
   </main>
 
