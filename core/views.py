@@ -12,8 +12,12 @@ def home(request):
     return render(request, "core/index.html")
 
 class Work(ListView):
-    model = Project
+    model = MyWork
     template_name = "core/work.html"
+
+class WorkDetailView(DetailView):
+    model = MyWork
+    template_name = "core/work_detail.html"
 
 class ProjectView(DetailView):
 	model = Project

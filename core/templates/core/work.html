@@ -11,22 +11,21 @@
     </h2>
     <div class="row">
       {%for object in object_list%}
-        <div class="col-md-6">
-          <div class="work-style">
-            <div class="item">
-              <h1>{{object.title}}</h1>
-              <a href="{{object.get_absolute_url}}">
-                <img src="{{object.image.url}}" alt="Project" class="project-images-on">
-              </a>
-              <a href="" class="btn-light btn-style1">
-                <i class="fas fa-eye"></i> Project
-              </a>
-
+         <div class="col-md-4">
+           <div class="work-style">
+             <div class="item">
+                <h1>{{object.title}}</h1>
+                <a href="{{object.get_absolute_url}}">
+                   <img src="{{object.image.url}}" alt="Project" class="project-images-on">
+                </a>
+                <a href="" class="btn-light btn-style1">
+                   <i class="fas fa-eye"></i> Project
+                </a>
             </div>
-            </div>
-            </div>
-        {%endfor%}
           </div>
+         </div>
+      {%endfor%}
+   </div>
   </main>
 
  {%endblock content%}

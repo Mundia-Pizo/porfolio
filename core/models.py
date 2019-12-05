@@ -15,7 +15,7 @@ class MyWork(models.Model):
 		})
 	@property
 	def projects(self):
-		return self.project_set.all()
+		return self.project_set.all().order_by('position')
 
 class Project(models.Model):
 	title       = models.CharField(max_length=100)
@@ -23,6 +23,7 @@ class Project(models.Model):
 	work        = models.ForeignKey(MyWork, on_delete=models.CASCADE)
 	description = models.TextField()
 	url         = models.URLField()
+	position    = models.IntegerField()
 	slug        = models.SlugField()
 
 	def __str__(self):

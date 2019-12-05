@@ -1,0 +1,33 @@
+{%extends "core/layout.html"%}
+{%load static%}
+{%block content%}
+  <main id="work">
+    <h1 class="lg-heading">
+      My
+      <span class="text-warning">Projects</span>
+    </h1>
+    <h2 class="sm-heading">
+      Check out some of my projects...
+    </h2>
+    <div class="row">
+        <div class="col-md-6 mb-5">
+          <div class="work-style">
+            <div class="item">
+              <h1 class="text-warning mb-5">{{object.title}}</h1>
+              {%for project in object.projects.all%}
+              <h2>{{project.title}}</h2>
+                <img src="{{project.image.url}}" alt="Project" class="project-images-on">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                 Tempora, facilis, quos cum illo at quae nulla laboriosam possimus
+                 repudiandae perferendis vero in adipisci iusto deserunt nesciunt quaerat ad ducimus a.</p>
+              <a href="{{project.url}}" class="btn-dark btn-style1 mb-5">
+                <i class="fab fa-github"></i> Github
+              </a>
+              {%endfor%}
+            </div>
+            </div>
+            </div>
+          </div>
+  </main>
+
+ {%endblock content%}

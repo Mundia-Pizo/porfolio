@@ -17,7 +17,7 @@
   padding: 5px;
 }
 
-.menu-btn.close { 
+.menu-btn.close {
     transform: rotate(180deg); }
 
 .menu-btn.close .btn-line:nth-child(1) {
@@ -114,6 +114,9 @@
 
 .work-style{
   width: 400px;
+}
+.project-style{
+  height: 200px;
 }
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -229,12 +232,12 @@ main#home h1 {
 
 .center-content{
   margin: 50%;
-  object-position:center; 
+  object-position:center;
 }
 .git-style{
   background-color: #000;
   display: grid;
-  
+
 }
 
 .btn-style1{
@@ -245,7 +248,7 @@ main#home h1 {
   border-color: #eece1a;
   width: 500px;
   height: 300px;
-  border: 3px #eece1a solid; 
+  border: 3px #eece1a solid;
   object-fit: cover;
 }
 
@@ -322,7 +325,7 @@ main#home h1 {
   background: #c4c4c4;
   color: #333; }
 .btn-width{
-  width: 
+  width:
 }
 
 #main-footer {
