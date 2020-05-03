@@ -5,8 +5,8 @@
       <div class="btn-line"></div>
     </div>
 
-    <nav class="menu">
-      <div class="menu-branding">
+    <nav onmouseout="closeMenu()" class="menu">
+      <div id="menuDiv" onmouseout="closeMenu()" class="menu-branding">
         <div class="portrait"></div>
       </div>
       <ul class="menu-nav">
@@ -21,11 +21,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="{% url  'core:list' %}" class="nav-link">
+          <a href="{% url  'core:project_list' %}" class="nav-link">
             Projects
           </a>
         </li>
-        <li class="nav-item current">
+        <li class="nav-item ">
           <a href="{% url  'core:contact' %}" class="nav-link">
             Contact Me
           </a>

@@ -1,12 +1,21 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Project, MyWork
+from .models import Project, MyWork, ProfilePicture
 
 def about(request):
-    return render(request, "core/about.html")
+    profile = ProfilePicture.objects.all()
+
+    context = {
+        'profile':profile
+    }
+    return render(request, "core/about.html", context)
 
 def contact(request):
-    return render(request, "core/contact.html")
+    profile = ProfilePicture.objects.all()
+    context={
+        'profile':profile
+    }
+    return render(request, "core/contact.html",context)
 
 def home(request):
     return render(request, "core/index.html")
