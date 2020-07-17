@@ -14,13 +14,15 @@ class MyWork(models.Model):
 		return reverse("core:project", kwargs={
 		'slug':self.slug
 		})
+
+
 	@property
 	def projects(self):
 		return self.project_set.all().order_by('position')
 
 
-	def save(self):
-		super().save()
+	def save(self,*args, **kwargs):
+		super().save(*args, **kwargs)
 
 		img = Image.open(self.image.path)
 
@@ -46,10 +48,10 @@ class Project(models.Model):
 	def get_absolute_url(self,*args, **kwargs):
 		return reverse('core:project', kwargs={
 		    "work_slug":self.work.slug,
-			"slug":self.slug
+			# "slug":self.slug
 			})
-	def save(self):
-		super().save()
+	def save(self, *args, **kwargs):
+		super().save(*args, **kwargs)
 
 		img = Image.open(self.image.path)
 
@@ -67,8 +69,8 @@ class ProfilePicture(models.Model):
 	def __str__(self):
 		return self.title
 
-	def save(self):
-		super().save()
+	def save(self, *args, **kwargs):
+		super().save(*args, **kwargs)
 
 		image_croped = Image.open(self.image.path)
 
